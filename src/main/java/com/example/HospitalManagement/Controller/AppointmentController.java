@@ -28,6 +28,10 @@ public class AppointmentController {
     public List<Appointment> getAppointmentsByDate(@PathVariable String date) {
         return appointmentRepository.findByDate(date);
     }
+    @GetMapping("/email/{email}")
+    public List<Appointment> getAppointmentsByEmail(@PathVariable String email) {
+        return appointmentRepository.findByEmail(email);
+    }
 
     @GetMapping("/doctor/{doctorId}")
     public List<Appointment> getAppointmentsByDoctor(

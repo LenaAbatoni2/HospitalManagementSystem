@@ -32,6 +32,9 @@ public class AppointmentService {
     public List<Appointment> getAppointmentsByPatient(Long patientId) {
         return appointmentRepository.findByPatientId(patientId);
     }
+    public List<Appointment> getAppointmentsByEmail(String email) {
+        return appointmentRepository.findByEmail(email);
+    }
 
     public void deleteAppointment(Long id) {
         return ;
